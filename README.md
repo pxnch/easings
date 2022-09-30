@@ -19,11 +19,18 @@ double test = easing( 0.5 );
 
 # c_easer
 This class is meant to be used for easing things over a set period of time with an easing function.
+
+[code example](https://github.com/pxnch/easings/blob/main/example/main.cc)
+
 ### usage
 ```cpp
 auto easer = easings::c_easer< type >( start, end, duration, easing type );
+
 type value = easer.get_value( );
+
 easer.direct( value, duration );
+
+bool done = easer.is_done( );
 ```
 ### type requirements
 
