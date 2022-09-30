@@ -12,16 +12,19 @@ you can specify a type by using "easings::<easing_type>".
 the names of the easings can be found [here](https://github.com/pxnch/easings/blob/main/lib/ease/functions.hh).
 
 # getting an easing function
-
-    auto easing = easings::get_ease( <easing_type> );
-    double test = easing( 0.5 );
+```cpp
+auto easing = easings::get_ease( <easing_type> );
+double test = easing( 0.5 );
+```
 
 # c_easer
 This class is meant to be used for easing things over a set period of time with an easing function.
 ### usage
-    auto easer = easings::c_easer< type >( start, end, duration in seconds, easing type );
-	type value = easer.get_value( );
-	easer.direct( value, duration (default is 1.f) );
+```cpp
+auto easer = easings::c_easer< type >( start, end, duration, easing type );
+type value = easer.get_value( );
+easer.direct( value, duration );
+```
 ### type requirements
 
 - has to have support for the operator **-** (type)
